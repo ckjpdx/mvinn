@@ -1,5 +1,5 @@
 # Mountain View Inn
-Former inn, located in Norfolk, CT.
+Site for a former inn, located in Norfolk, CT.
 
 ## Synopsis
 A website that once served as the Mountain View Inn's company website.
