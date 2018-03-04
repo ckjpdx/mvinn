@@ -11,4 +11,4 @@ Allow customers to navigate info about the inn, few pictures and local venues, a
 HTML, CSS
 
 ## Installation
-git clone, or view (here)[ckjpdx.github.io/mvinn]
+git clone, or view on [gh-pages](ckjpdx.github.io/mvinn)
