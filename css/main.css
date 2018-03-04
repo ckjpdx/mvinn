@@ -1,0 +1,231 @@
+/*header, nav, ul, li, a {margin:0; padding:0;}*/
+
+@font-face {
+    font-family: script;
+    src: url(../script.ttf);
+}
+
+body {
+	width: 100%;
+	background-color: white;
+}
+
+div { 
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden; /*clearfix- prevents margin collapsing float issues*/
+}
+
+.center {
+	text-align: center;
+}
+
+div.reserve { /*used to center reserve button link*/
+	margin: 30px;
+	text-align: center;
+	overflow: visible; /*allow anchor padding overflow*/
+}
+
+div.two-col {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+.two-col img {
+	max-width: 90%;
+}
+
+div.float-col { /*contains 2 div.two-col to form a row*/
+	padding: 2% 0;
+	border-top-style: dotted;
+	border-top-color: #AAA;
+}
+
+h2, h3, h4, h5, h6, p, li, a {
+	font-family: serif;
+}
+
+h2 {
+	font-size: 1.75em;
+	text-align: center;
+}
+
+header {
+	margin: 0;
+	background-color: #fff;
+}
+
+header h1 {
+	margin: 0;
+	padding: 20px 0 0;
+    font-family: script;
+	font-size: 4em;
+	text-align: center;
+}
+
+nav {
+	padding: 3px;
+	margin: 0; 
+	background-color: #fff;
+}
+
+nav a {
+	background-color: #600;
+	padding: 5px;
+	border-radius: 10%;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+nav a:link, nav a:visited {
+	color: white;
+}
+
+nav a:active, nav a:hover {
+	color: red;
+}
+
+nav ul {
+	list-style: none;
+	text-align: center;
+	margin: 12px;
+	padding: 0; /* removes indent */
+}
+
+nav ul li {
+	display: inline; /*puts links on the same line*/
+	list-style: none;
+	margin: 0;
+	padding: 5px;
+}
+
+nav ul li:nth-last-of-type(n+2) { /*gives border spacer to every li starting from the last li*/
+	border-right: 2px solid rgba(150,30,30,.5);
+}
+
+section {
+	background-color: white;
+	border-top: 2px #888 solid;
+}
+
+a.button { /*button effect*/
+	color: white;
+	text-decoration: none;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px #888;
+	font-size: 1.1em;
+	padding: 10px;
+	background-color: #511;
+}
+
+a.button:hover, a.button:active { /*button effect*/
+	color: red;
+}
+
+a.button + * {
+	margin-top: 0;
+}
+
+article {
+	margin: 0 auto 15px; /*lets header margins collapse - prevents double spacing - auto keeps centered*/
+	padding: 0 2%; /* allows space on the edges since margin is already auto centereing */
+	max-width: 960px; /*keep column contents neat and not too stretched out*/
+}
+
+article div.solo {
+	max-width: 500px;
+}
+
+img, article div.solo img {
+	max-width: 100%;
+}
+
+article .floatright { /*right floating elements for articles*/
+	float: right;
+	margin-left: 1%;
+}
+
+article .floatleft { /*left floating elements for articles*/
+	float: left;
+	margin-right: 1%;
+}
+
+.clear {
+	clear:both;
+}
+
+article img {
+	border-radius: 15px;
+	max-width: 50%;
+}
+
+footer {
+	background-color: #b2c891;
+	padding: 2%;
+	overflow: hidden;
+	text-align: center;
+	border-top: 2px #886 solid;
+}
+
+footer > * {
+	width: 33%;
+	float: left;
+}
+
+.quote {
+	font-style: italic;
+	font-size: 1.3em;
+}
+
+@media screen and (max-width: 606px) { 
+	header h1 {
+		font-size: 3em;
+		white-space: nowrap;
+	}
+
+	nav li {
+		line-height: 2em;
+	}
+	nav ul {
+		margin: 0;
+	}
+
+	article div.solo {
+		max-width: 100%;
+	}
+
+	article img.floatright, article img.floatleft {
+		max-width: 100%;
+		float: none;
+	}
+	
+	.margin-fix { /*fixes double margin caused by clearfix overflow hidden*/
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 580px) { 
+	footer > * {
+	float: none; /*vertical stack*/
+	width: 100%; /*stop div from crushing text*/
+	}
+}
+
+@media screen and (max-width: 435px) { 
+	div.two-col {
+		width: 100%;
+	}
+	
+	.two-col img {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 345px) { 
+	header h1 {		
+		font-size: 2.2em; /*stops h1 line break*/
+		white-space: nowrap;
+	}
+}
